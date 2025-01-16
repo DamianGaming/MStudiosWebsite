@@ -24,14 +24,14 @@ function toggleNews() {
 }
 
 function toggleLogDetails(logId) {
-  var logDetails = document.getElementById(logId);
+  var logContent = document.getElementById(logId);
   var readMoreBtn = document.querySelector(`#${logId} + .btn`);
 
-  if (logDetails.style.display === "none") {
-    logDetails.style.display = "block";
-    readMoreBtn.innerHTML = "Read Less";
-  } else {
-    logDetails.style.display = "none";
+  if (logContent.style.height === "auto") {
+    logContent.style.height = "150px"; // Collapse to the original height
     readMoreBtn.innerHTML = "Read More";
+  } else {
+    logContent.style.height = "auto"; // Expand to show full content
+    readMoreBtn.innerHTML = "Read Less";
   }
 }
