@@ -9,11 +9,60 @@ body, h1, h2, h3, p, ul, a {
 }
 
 body {
-  background: linear-gradient(135deg, #d4f0ff, #b0e0e6);
+  background: linear-gradient(135deg, #d1e9ff, #a8d8f0);
   color: #333;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Subtle Background Enhancements */
+body::before {
+  content: "";
+  position: absolute;
+  top: -100px;
+  left: -100px;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(0, 102, 204, 0.4), transparent);
+  z-index: -2;
+  animation: moveGlow 10s linear infinite alternate;
+}
+
+body::after {
+  content: "";
+  position: absolute;
+  bottom: -150px;
+  right: -150px;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(0, 204, 255, 0.3), transparent);
+  z-index: -2;
+  animation: moveGlow 12s linear infinite alternate-reverse;
+}
+
+/* Background Pattern */
+#backgroundPattern {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('https://www.transparenttextures.com/patterns/soft-wallpaper.png') repeat;
+  opacity: 0.1;
+  z-index: -1;
+}
+
+/* Animation */
+@keyframes moveGlow {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(20px, 20px);
+  }
 }
 
 /* Header */
@@ -50,7 +99,7 @@ body {
 }
 
 .nav-links a:hover {
-  color: #d4f0ff;
+  color: #a8d8f0;
 }
 
 /* Sections */
@@ -84,7 +133,7 @@ body {
 }
 
 .news-box a.btn:hover {
-  color: #b0e0e6;
+  color: #a8d8f0;
 }
 
 /* Log Grid */
@@ -122,7 +171,7 @@ body {
 }
 
 .log-card a.btn:hover {
-  color: #b0e0e6;
+  color: #a8d8f0;
 }
 
 /* Footer */
@@ -133,28 +182,4 @@ body {
   text-align: center;
   padding: 1rem 0;
   font-size: 0.875rem;
-}
-
-/* Subtle Background Effects */
-body::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: url('https://www.transparenttextures.com/patterns/hexellence.png') repeat;
-  opacity: 0.2;
-  z-index: -1;
-}
-
-body::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 300px;
-  height: 300px;
-  background: radial-gradient(circle, rgba(0, 64, 128, 0.3), transparent);
-  z-index: -1;
 }
