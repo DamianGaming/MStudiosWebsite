@@ -1,12 +1,13 @@
 // Maintenance Mode Toggle
-const isMaintenance = true; // Change this to true to enable maintenance mode
+const isMaintenance = false; // Toggle maintenance mode here
 
+// Get Elements
 const maintenanceMode = document.getElementById('maintenance-mode');
-const mainContent = document.querySelector('main');
-const header = document.querySelector('header');
-const footer = document.querySelector('footer');
+const mainContent = document.getElementById('main-content');
+const header = document.getElementById('header');
+const footer = document.getElementById('footer');
 
-// Toggle Maintenance Mode
+// Apply Maintenance Mode
 if (isMaintenance) {
   maintenanceMode.style.display = 'flex'; // Show maintenance screen
   mainContent.style.display = 'none'; // Hide main content
