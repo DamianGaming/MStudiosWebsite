@@ -10,24 +10,21 @@ window.addEventListener('scroll', function () {
     footer.classList.remove('show');  // Hide footer when not at the bottom
   }
 });
-// Toggle the "Read More" functionality for the news section
 function toggleNews() {
   var extraNews = document.getElementById("extraNews");
   var readMoreBtn = document.getElementById("readMoreBtn");
-  
+
   if (extraNews.style.display === "none") {
     extraNews.style.display = "inline";
-    readMoreBtn.innerText = "Read Less";
+    readMoreBtn.innerHTML = "Read Less";
   } else {
     extraNews.style.display = "none";
-    readMoreBtn.innerText = "Read More";
+    readMoreBtn.innerHTML = "Read More";
   }
 }
 
-// Toggle the "More Details" functionality for each update log
 function toggleLogDetails(logId) {
   var logDetails = document.getElementById(logId);
-  
   if (logDetails.style.display === "none") {
     logDetails.style.display = "block";
   } else {
