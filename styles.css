@@ -90,12 +90,12 @@ textarea {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   font-family: 'Inter', sans-serif;
   color: #333;
+  cursor: default; /* Regular cursor */
 }
 
 textarea.solid-box {
   background-color: #f0f8ff;  /* Light solid background */
   color: #555;  /* Darker text for contrast */
-  cursor: not-allowed;  /* Ensures no typing cursor */
 }
 
 /* Grid Layout for Update Logs */
@@ -148,10 +148,14 @@ textarea.solid-box {
   text-align: center;
   padding: 20px 0;
   font-size: 0.9em;
-  position: sticky;
-  bottom: 0;
+  position: absolute;
   width: 100%;
-  box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+  bottom: -100px;
+  transition: bottom 0.3s ease;
+}
+
+.footer.show {
+  bottom: 0;
 }
 
 /* Mobile Responsiveness */
