@@ -27,11 +27,12 @@ function toggleLogDetails(logId) {
   var logContent = document.getElementById(logId);
   var readMoreBtn = document.querySelector(`#${logId} + .btn`);
 
-  if (logContent.style.height === "auto") {
-    logContent.style.height = "150px"; // Collapse to the original height
-    readMoreBtn.innerHTML = "Read More";
-  } else {
+  // Check if the text box is currently collapsed (i.e., height is 150px)
+  if (logContent.style.height === "150px" || logContent.style.height === "") {
     logContent.style.height = "auto"; // Expand to show full content
     readMoreBtn.innerHTML = "Read Less";
+  } else {
+    logContent.style.height = "150px"; // Collapse to the default height
+    readMoreBtn.innerHTML = "Read More";
   }
 }
