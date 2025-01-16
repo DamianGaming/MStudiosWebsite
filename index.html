@@ -47,21 +47,18 @@
         <div class="log-grid">
           <div class="log-card">
             <h3>FiveM Server</h3>
-            <textarea class="solid-box" readonly>
+            <textarea class="solid-box" readonly id="fivemLogContent">
 [01/14/2025] - Bug Fix
 - Fixed server lag issues.
 
 [01/10/2025] - Update
 - Added new vehicles and maps.
             </textarea>
-            <a href="javascript:void(0);" onclick="toggleLogDetails('fivemLogDetails')" class="btn">Read More</a>
-            <div id="fivemLogDetails" class="log-details" style="display: none;">
-              <p>Additional details for FiveM server update...</p>
-            </div>
+            <a href="javascript:void(0);" onclick="toggleLogDetails('fivemLogContent')" class="btn">Read More</a>
           </div>
           <div class="log-card">
             <h3>Minecraft Server</h3>
-            <textarea class="solid-box" readonly>
+            <textarea class="solid-box" readonly id="minecraftLogContent">
 [01/15/2025] - New Features
 - Introduced a PvP arena.
 - Added survival challenges.
@@ -69,24 +66,18 @@
 [01/05/2025] - Maintenance
 - Upgraded to the latest version.
             </textarea>
-            <a href="javascript:void(0);" onclick="toggleLogDetails('minecraftLogDetails')" class="btn">Read More</a>
-            <div id="minecraftLogDetails" class="log-details" style="display: none;">
-              <p>Additional details for Minecraft server update...</p>
-            </div>
+            <a href="javascript:void(0);" onclick="toggleLogDetails('minecraftLogContent')" class="btn">Read More</a>
           </div>
           <div class="log-card">
             <h3>Roblox Games</h3>
-            <textarea class="solid-box" readonly>
+            <textarea class="solid-box" readonly id="robloxLogContent">
 [01/14/2025] - Roleplay Update
 - New vehicles in Westland RP.
 
 [01/10/2025] - Bug Fix
 - Resolved UI glitches in the menu.
             </textarea>
-            <a href="javascript:void(0);" onclick="toggleLogDetails('robloxLogDetails')" class="btn">Read More</a>
-            <div id="robloxLogDetails" class="log-details" style="display: none;">
-              <p>Additional details for Roblox games update...</p>
-            </div>
+            <a href="javascript:void(0);" onclick="toggleLogDetails('robloxLogContent')" class="btn">Read More</a>
           </div>
         </div>
       </div>
