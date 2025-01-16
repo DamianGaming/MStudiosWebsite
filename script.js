@@ -1,5 +1,5 @@
 // Set this variable to enable or disable maintenance mode.
-const isMaintenance = true;
+const isMaintenance = false;
 
 const maintenanceMode = document.getElementById('maintenance-mode');
 const footer = document.querySelector('.footer');
