@@ -11,6 +11,7 @@ window.addEventListener('scroll', function () {
   }
 });
 
+// Function to toggle news visibility
 function toggleNews() {
   const extraNews = document.getElementById("extraNews");
   const readMoreBtn = document.getElementById("readMoreBtn");
@@ -24,15 +25,18 @@ function toggleNews() {
   }
 }
 
-function toggleLogDetails(logId) {
+// Function to toggle logs visibility
+function toggleLogDetails(logId, btnId) {
   const logContent = document.getElementById(logId);
-  const btn = logContent.nextElementSibling;
+  const btn = document.getElementById(btnId);
 
-  if (logContent.style.height === "200px") {
-    logContent.style.height = "auto";
+  if (logContent.dataset.expanded === "false") {
+    logContent.dataset.expanded = "true";
     btn.innerHTML = "Read Less";
+    logContent.innerHTML = logContent.dataset.fullContent; // Show all logs
   } else {
-    logContent.style.height = "200px";
+    logContent.dataset.expanded = "false";
     btn.innerHTML = "Read More";
+    logContent.innerHTML = logContent.dataset.previewContent; // Show only preview
   }
 }
