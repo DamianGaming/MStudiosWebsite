@@ -4,57 +4,62 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MegaStudios Updates</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
-  <script defer src="scripts.js"></script>
 </head>
 <body>
-  <!-- Maintenance Mode Overlay -->
-  <div id="maintenance-mode" class="hidden">
-    <div class="maintenance-message">
-      <h1>🚧 We're Under Maintenance</h1>
-      <p>We’re currently making updates to improve your experience. Please check back soon!</p>
-      <div class="loading-spinner"></div>
-    </div>
-  </div>
-
-  <!-- Main Website Content -->
-  <div id="website-content">
-    <header class="header">
+  <header class="header">
+    <div class="container">
       <h1>MegaStudios Updates</h1>
-    </header>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#updates">Updates</a></li>
+          <li><a href="#news">News</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-    <main class="content">
-      <section class="updates">
+  <main class="main">
+    <section id="updates" class="section">
+      <div class="container">
         <h2>Update Logs</h2>
-        <div class="log">
-          <h3>FiveM Server</h3>
-          <p>Latest Updates:</p>
-          <textarea readonly>Enter your FiveM server updates here...</textarea>
-          <a href="#">More Details</a>
+        <div class="log-grid">
+          <div class="log-card">
+            <h3>FiveM Server</h3>
+            <p>Latest Updates:</p>
+            <textarea readonly>Enter your FiveM server updates here...</textarea>
+            <a href="#" class="btn">More Details</a>
+          </div>
+          <div class="log-card">
+            <h3>Minecraft Server</h3>
+            <p>Latest Updates:</p>
+            <textarea readonly>Enter your Minecraft server updates here...</textarea>
+            <a href="#" class="btn">More Details</a>
+          </div>
+          <div class="log-card">
+            <h3>Roblox Games</h3>
+            <p>Latest Updates:</p>
+            <textarea readonly>Enter your Roblox game updates here...</textarea>
+            <a href="#" class="btn">More Details</a>
+          </div>
         </div>
-        <div class="log">
-          <h3>Minecraft Server</h3>
-          <p>Latest Updates:</p>
-          <textarea readonly>Enter your Minecraft server updates here...</textarea>
-          <a href="#">More Details</a>
-        </div>
-        <div class="log">
-          <h3>Roblox Games</h3>
-          <p>Latest Updates:</p>
-          <textarea readonly>Enter your Roblox game updates here...</textarea>
-          <a href="#">More Details</a>
-        </div>
-      </section>
+      </div>
+    </section>
 
-      <section class="news">
+    <section id="news" class="section">
+      <div class="container">
         <h2>News</h2>
         <textarea readonly>Post website changes and news here...</textarea>
-      </section>
-    </main>
+      </div>
+    </section>
+  </main>
 
-    <footer class="footer">
+  <footer class="footer">
+    <div class="container">
       <p>&copy; 2025 MegaStudios Updates | All rights reserved.</p>
-    </footer>
-  </div>
+    </div>
+  </footer>
 </body>
 </html>
