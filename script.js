@@ -25,9 +25,13 @@ function toggleNews() {
 
 function toggleLogDetails(logId) {
   var logDetails = document.getElementById(logId);
+  var readMoreBtn = document.querySelector(`#${logId} + .btn`);
+
   if (logDetails.style.display === "none") {
     logDetails.style.display = "block";
+    readMoreBtn.innerHTML = "Read Less";
   } else {
     logDetails.style.display = "none";
+    readMoreBtn.innerHTML = "Read More";
   }
 }
