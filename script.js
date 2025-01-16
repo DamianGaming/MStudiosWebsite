@@ -1,19 +1,19 @@
-// Set this variable to enable or disable maintenance mode.
-const isMaintenance = false;
+// Maintenance Mode Control
+const isMaintenance = false; // Change to true to enable maintenance mode
 
 const maintenanceMode = document.getElementById('maintenance-mode');
 const footer = document.querySelector('.footer');
 
-// Activate maintenance mode if enabled
+// Enable or disable maintenance mode
 if (isMaintenance) {
   maintenanceMode.classList.remove('hidden');
-  document.body.style.overflow = 'hidden'; // Prevent scrolling while in maintenance mode
+  document.body.style.overflow = 'hidden'; // Disable scrolling
 } else {
   maintenanceMode.classList.add('hidden');
-  document.body.style.overflow = ''; // Allow scrolling
+  document.body.style.overflow = ''; // Enable scrolling
 }
 
-// Show footer only when at the bottom of the page
+// Footer visibility logic
 window.addEventListener('scroll', () => {
   if (!isMaintenance && window.innerHeight + window.scrollY >= document.body.offsetHeight) {
     footer.classList.add('visible');
