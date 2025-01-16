@@ -108,6 +108,31 @@ textarea.solid-box {
   line-height: 1.5;
 }
 
+/* News Section */
+.news-box {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#newsContent {
+  font-size: 1.1em;
+  color: #333;
+}
+
+#readMoreBtn {
+  color: #005f99;
+  text-decoration: none;
+  font-weight: 600;
+  margin-top: 10px;
+  display: inline-block;
+}
+
+#readMoreBtn:hover {
+  color: #ffdd00;
+}
+
 /* Grid Layout for Update Logs */
 .log-grid {
   display: grid;
@@ -174,24 +199,13 @@ textarea.solid-box {
   .nav-links li {
     display: block;
     margin: 5px 0;
-    text-align: center;
   }
 
-  .section h2 {
-    font-size: 1.8em;
+  .log-grid {
+    grid-template-columns: 1fr;
   }
 
-  .log-card h3 {
-    font-size: 1.3em;
-  }
-
-  .btn {
-    font-size: 0.85em;
-    padding: 8px 12px;
-  }
-
-  textarea {
-    font-size: 0.9em;
-    padding: 10px;
+  .news-box {
+    padding: 15px;
   }
 }
