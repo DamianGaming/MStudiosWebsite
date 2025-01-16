@@ -94,6 +94,24 @@ textarea {
   overflow: hidden; /* Prevent scrolling */
   padding: 10px;
   line-height: 1.6;
+  display: block;
+}
+
+/* Buttons */
+a.btn {
+  display: inline-block;
+  margin-top: 10px;
+  background-color: #0056b3;
+  color: white;
+  text-decoration: none; /* No underline */
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-weight: 600;
+  transition: background-color 0.3s;
+}
+
+a.btn:hover {
+  background-color: #003f80;
 }
 
 /* Footer */
