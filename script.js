@@ -1,5 +1,5 @@
 // Maintenance Mode Toggle
-const isMaintenance = false; // Change this to true to enable maintenance mode
+const isMaintenance = true; // Change this to true to enable maintenance mode
 
 const maintenanceMode = document.getElementById('maintenance-mode');
 const mainContent = document.querySelector('main');
