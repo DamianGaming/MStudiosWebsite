@@ -101,6 +101,13 @@ textarea.solid-box {
   overflow: hidden;
 }
 
+.log-details {
+  padding-top: 15px;
+  font-size: 1em;
+  color: #555;
+  line-height: 1.5;
+}
+
 /* Grid Layout for Update Logs */
 .log-grid {
   display: grid;
