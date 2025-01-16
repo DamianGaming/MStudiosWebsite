@@ -12,8 +12,8 @@ window.addEventListener('scroll', function () {
 });
 
 function toggleNews() {
-  var extraNews = document.getElementById("extraNews");
-  var readMoreBtn = document.getElementById("readMoreBtn");
+  const extraNews = document.getElementById("extraNews");
+  const readMoreBtn = document.getElementById("readMoreBtn");
 
   if (extraNews.style.display === "none") {
     extraNews.style.display = "inline";
@@ -25,23 +25,14 @@ function toggleNews() {
 }
 
 function toggleLogDetails(logId) {
-  var logContent = document.getElementById(logId);
-  var readMoreBtn = document.querySelector(`#${logId} + .btn`);
+  const logContent = document.getElementById(logId);
+  const btn = logContent.nextElementSibling;
 
-  // Expand the log when "Read More" is clicked (if collapsed)
-  if (logContent.style.height === "150px" || logContent.style.height === "") {
-    logContent.style.height = "auto"; // Expand the log
-    readMoreBtn.innerHTML = "Read Less"; // Change button text
+  if (logContent.style.height === "200px") {
+    logContent.style.height = "auto";
+    btn.innerHTML = "Read Less";
   } else {
-    logContent.style.height = "150px"; // Collapse the log
-    readMoreBtn.innerHTML = "Read More"; // Change button text
+    logContent.style.height = "200px";
+    btn.innerHTML = "Read More";
   }
-}
-
-// Initialize the textboxes in a collapsed state on page load
-window.onload = function() {
-  var logContentElements = document.querySelectorAll('.solid-box');
-  logContentElements.forEach(function(logContent) {
-    logContent.style.height = "150px"; // Set default collapsed height for all logs
-  });
 }
