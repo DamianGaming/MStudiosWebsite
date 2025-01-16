@@ -27,7 +27,7 @@ function toggleLogDetails(logId) {
   var logContent = document.getElementById(logId);
   var readMoreBtn = document.querySelector(`#${logId} + .btn`);
 
-  // Check if the text box is currently collapsed (i.e., height is 150px)
+  // Start with the text boxes collapsed (height = 150px)
   if (logContent.style.height === "150px" || logContent.style.height === "") {
     logContent.style.height = "auto"; // Expand to show full content
     readMoreBtn.innerHTML = "Read Less";
@@ -35,4 +35,12 @@ function toggleLogDetails(logId) {
     logContent.style.height = "150px"; // Collapse to the default height
     readMoreBtn.innerHTML = "Read More";
   }
+}
+
+// Initialize the textboxes in a collapsed state
+window.onload = function() {
+  var logContentElements = document.querySelectorAll('.solid-box');
+  logContentElements.forEach(function(logContent) {
+    logContent.style.height = "150px"; // Collapse all log text areas on page load
+  });
 }
