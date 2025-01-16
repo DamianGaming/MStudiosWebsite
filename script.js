@@ -1,23 +1,20 @@
-// Maintenance Mode Control
-const isMaintenance = false; // Change to true to enable maintenance mode
+// Maintenance Mode Toggle
+const isMaintenance = false; // Change this to true to enable maintenance mode
 
 const maintenanceMode = document.getElementById('maintenance-mode');
-const footer = document.querySelector('.footer');
+const mainContent = document.querySelector('main');
+const header = document.querySelector('header');
+const footer = document.querySelector('footer');
 
-// Enable or disable maintenance mode
+// Toggle Maintenance Mode
 if (isMaintenance) {
-  maintenanceMode.classList.remove('hidden');
-  document.body.style.overflow = 'hidden'; // Disable scrolling
+  maintenanceMode.style.display = 'flex'; // Show maintenance screen
+  mainContent.style.display = 'none'; // Hide main content
+  header.style.display = 'none'; // Hide header
+  footer.style.display = 'none'; // Hide footer
 } else {
-  maintenanceMode.classList.add('hidden');
-  document.body.style.overflow = ''; // Enable scrolling
+  maintenanceMode.style.display = 'none'; // Hide maintenance screen
+  mainContent.style.display = 'block'; // Show main content
+  header.style.display = 'block'; // Show header
+  footer.style.display = 'block'; // Show footer
 }
-
-// Footer visibility logic
-window.addEventListener('scroll', () => {
-  if (!isMaintenance && window.innerHeight + window.scrollY >= document.body.offsetHeight) {
-    footer.classList.add('visible');
-  } else {
-    footer.classList.remove('visible');
-  }
-});
