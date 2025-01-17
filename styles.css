@@ -6,16 +6,15 @@
 }
 
 html, body {
-  min-height: 100%;
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(to bottom right, #eef7ff, #cce7ff);
   display: flex;
   flex-direction: column;
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
-  background: linear-gradient(to bottom right, #eef7ff, #cce7ff);
   color: #333;
-  margin: 0;
 }
 
 /* General Container */
@@ -65,6 +64,12 @@ body {
   color: white;
 }
 
+/* Main Content */
+.main {
+  flex: 1; /* Ensures footer stays at the bottom */
+  padding: 2rem 0;
+}
+
 /* Sections */
 .section {
   padding: 2.5rem 0;
@@ -111,66 +116,45 @@ body {
   background: #1a8cff;
 }
 
-/* Log Cards */
-.log-grid {
+/* Meet the Team Section */
+.team-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 1.5rem;
+  padding: 2rem 0;
 }
 
-.log-card {
+.team-card {
   background: white;
   border: 1px solid #ddd;
   border-radius: 8px;
   padding: 1.5rem;
+  text-align: center;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.log-card:hover {
+.team-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
-.log-card h3 {
-  font-size: 1.4rem;
+.team-card img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
   margin-bottom: 1rem;
-  color: #0056a8;
-  text-align: center;
 }
 
-.log-card p {
+.team-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #0056a8;
+}
+
+.team-card p {
   font-size: 1rem;
   color: #555;
-  margin-bottom: 1rem;
-}
-
-.log-card .btn {
-  display: inline-block;
-  background: #0056a8;
-  color: white;
-  padding: 0.6rem 1.2rem;
-  border-radius: 4px;
-  text-decoration: none;
-  font-size: 1rem;
-  transition: background 0.3s;
-}
-
-.log-card .btn:hover {
-  background: #1a8cff;
-}
-
-/* Footer */
-.footer {
-  background: #0056a8;
-  color: white;
-  text-align: center;
-  padding: 1rem 0;
-  margin-top: auto;
-}
-
-.footer p {
-  font-size: 1rem;
 }
 
 /* Contact Form */
@@ -214,20 +198,15 @@ body {
   background: #1a8cff;
 }
 
-/* Read More Button */
-#readMoreBtn, .btn {
-  text-decoration: none;
-  display: inline-block;
-  margin-top: 1rem;
-  padding: 0.6rem 1.2rem;
+/* Footer */
+.footer {
   background: #0056a8;
-  color: #fff;
-  font-size: 1rem;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background 0.3s;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: auto;
 }
 
-#readMoreBtn:hover, .btn:hover {
-  background: #1a8cff;
+.footer p {
+  font-size: 1rem;
 }
