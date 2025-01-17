@@ -11,32 +11,28 @@ window.addEventListener('scroll', function () {
   }
 });
 
-// Function to toggle news visibility
 function toggleNews() {
   const extraNews = document.getElementById("extraNews");
   const readMoreBtn = document.getElementById("readMoreBtn");
 
   if (extraNews.style.display === "none") {
     extraNews.style.display = "inline";
-    readMoreBtn.innerHTML = "Read Less";
+    readMoreBtn.innerText = "Read Less";
   } else {
     extraNews.style.display = "none";
-    readMoreBtn.innerHTML = "Read More";
+    readMoreBtn.innerText = "Read More";
   }
 }
 
-// Function to toggle logs visibility
-function toggleLogDetails(logId, btnId) {
+function toggleLogDetails(logId) {
   const logContent = document.getElementById(logId);
-  const btn = document.getElementById(btnId);
+  const logBtn = document.getElementById(`logBtn${logId.split("LogContent")[0]}`);
 
-  if (logContent.dataset.expanded === "false") {
-    logContent.dataset.expanded = "true";
-    btn.innerHTML = "Read Less";
-    logContent.innerHTML = logContent.dataset.fullContent; // Show all logs
+  if (logContent.style.maxHeight) {
+    logContent.style.maxHeight = null;
+    logBtn.innerText = "Read More";
   } else {
-    logContent.dataset.expanded = "false";
-    btn.innerHTML = "Read More";
-    logContent.innerHTML = logContent.dataset.previewContent; // Show only preview
+    logContent.style.maxHeight = "none";
+    logBtn.innerText = "Read Less";
   }
 }
