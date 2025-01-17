@@ -24,15 +24,17 @@ function toggleNews() {
   }
 }
 
-function toggleLogDetails(logId) {
+function toggleLogDetails(logId, btnId) {
   const logContent = document.getElementById(logId);
-  const logBtn = document.getElementById(`logBtn${logId.split("LogContent")[0]}`);
+  const btn = document.getElementById(btnId);
 
-  if (logContent.style.maxHeight) {
-    logContent.style.maxHeight = null;
-    logBtn.innerText = "Read More";
+  if (logContent.dataset.expanded === "false") {
+    logContent.dataset.expanded = "true";
+    btn.innerHTML = "Read Less";
+    logContent.innerHTML = logContent.dataset.fullContent; // Show full content
   } else {
-    logContent.style.maxHeight = "none";
-    logBtn.innerText = "Read Less";
+    logContent.dataset.expanded = "false";
+    btn.innerHTML = "Read More";
+    logContent.innerHTML = logContent.dataset.previewContent; // Show only preview
   }
 }
