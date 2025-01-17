@@ -8,34 +8,34 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <div id="backgroundPattern"></div>
   <header class="header">
     <div class="container">
       <h1>MegaStudios Updates</h1>
       <nav>
         <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="meet-the-team.html">Meet the Team</a></li>
-          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="#news">News</a></li>
+          <li><a href="#updates">Updates</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
   <main class="main">
-    <!-- News Section -->
     <section id="news" class="section">
       <div class="container">
         <h2>Latest News</h2>
         <div class="news-box">
           <p id="newsContent">
-            [01/16/2025] - Website Update: Improved footer behavior, added templates for logs.<br>
+            [01/16/2025] - Website Update: Improved footer behavior, added template for logs.<br>
             [01/12/2025] - Maintenance: Scheduled downtime for server upgrades.<br>
             <span id="extraNews" style="display:none;">
               [01/10/2025] - New Features: Introduced a new section on the site.<br>
               [01/05/2025] - Bug Fix: Resolved issues with the site's footer.<br>
             </span>
           </p>
-          <a href="javascript:void(0);" onclick="toggleNews()" id="readMoreBtn">Read More</a>
+          <a href="javascript:void(0);" onclick="toggleNews()" id="readMoreBtn" class="btn">Read More</a>
         </div>
       </div>
     </section>
