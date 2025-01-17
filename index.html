@@ -8,14 +8,13 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div id="backgroundPattern"></div>
   <header class="header">
     <div class="container">
       <h1>MegaStudios Updates</h1>
       <nav>
         <ul class="nav-links">
-          <li><a href="team.html">Meet the Team</a></li>
-          <li><a href="index.html#updates">Updates</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="meet-the-team.html">Meet the Team</a></li>
           <li><a href="contact.html">Contact Us</a></li>
         </ul>
       </nav>
@@ -23,65 +22,57 @@
   </header>
 
   <main class="main">
+    <!-- News Section -->
     <section id="news" class="section">
       <div class="container">
         <h2>Latest News</h2>
         <div class="news-box">
           <p id="newsContent">
-            [01/16/2025] - Website Update: Improved footer behavior, added template for logs.<br>
+            [01/16/2025] - Website Update: Improved footer behavior, added templates for logs.<br>
             [01/12/2025] - Maintenance: Scheduled downtime for server upgrades.<br>
             <span id="extraNews" style="display:none;">
               [01/10/2025] - New Features: Introduced a new section on the site.<br>
               [01/05/2025] - Bug Fix: Resolved issues with the site's footer.<br>
             </span>
           </p>
-          <a href="javascript:void(0);" onclick="toggleNews()" id="readMoreBtn" class="btn">Read More</a>
+          <a href="javascript:void(0);" onclick="toggleNews()" id="readMoreBtn">Read More</a>
         </div>
       </div>
     </section>
 
-  <section id="updates" class="section">
+    <!-- Update Logs Section -->
+    <section id="updates" class="section">
       <div class="container">
         <h2>Update Logs</h2>
         <div class="log-grid">
-        <!-- FiveM Server Logs -->
+          <!-- Log 1 -->
           <div class="log-card">
             <h3>FiveM Server</h3>
-            <p id="fivemLogContent" data-expanded="false" 
-              data-preview-content="[01/14/2025] - Bug Fix<br>- Fixed server lag issues.<br>[01/10/2025] - Update<br>- Added new vehicles and maps."
-              data-full-content="[01/14/2025] - Bug Fix<br>- Fixed server lag issues.<br>[01/10/2025] - Update<br>- Added new vehicles and maps.<br>[01/05/2025] - Maintenance<br>- Improved server stability.">
-              [01/14/2025] - Bug Fix<br>- Fixed server lag issues.<br>[01/10/2025] - Update<br>- Added new vehicles and maps.
-            </p>
-            <a href="javascript:void(0);" onclick="toggleLogDetails('fivemLogContent', 'fivemLogBtn')" id="fivemLogBtn" class="btn">Read More</a>
+            <div class="solid-box">
+              <p id="fivemLogContent">
+                [01/14/2025] - Bug Fix<br>- Fixed server lag issues.<br>
+                [01/10/2025] - Update<br>- Added new vehicles and maps.<br>
+              </p>
+              <a href="javascript:void(0);" onclick="toggleLogDetails('fivemLogContent')" id="logBtnFivem">Read More</a>
+            </div>
           </div>
-
-          <!-- Minecraft Server Logs -->
+          <!-- Log 2 -->
           <div class="log-card">
             <h3>Minecraft Server</h3>
-            <p id="minecraftLogContent" data-expanded="false" 
-              data-preview-content="[01/15/2025] - New Features<br>- Introduced a PvP arena.<br>[01/05/2025] - Maintenance<br>- Upgraded to the latest version."
-              data-full-content="[01/15/2025] - New Features<br>- Introduced a PvP arena.<br>[01/05/2025] - Maintenance<br>- Upgraded to the latest version.<br>[12/25/2024] - Holiday Update<br>- Added winter-themed events.">
-              [01/15/2025] - New Features<br>- Introduced a PvP arena.<br>[01/05/2025] - Maintenance<br>- Upgraded to the latest version.
-            </p>
-            <a href="javascript:void(0);" onclick="toggleLogDetails('minecraftLogContent', 'minecraftLogBtn')" id="minecraftLogBtn" class="btn">Read More</a>
+            <div class="solid-box">
+              <p id="minecraftLogContent">
+                [01/15/2025] - New Features<br>- Introduced a PvP arena.<br>
+                [01/05/2025] - Maintenance<br>- Upgraded to the latest version.<br>
+              </p>
+              <a href="javascript:void(0);" onclick="toggleLogDetails('minecraftLogContent')" id="logBtnMinecraft">Read More</a>
+            </div>
           </div>
-
-          <!-- Roblox Games Logs -->
-          <div class="log-card">
-            <h3>Roblox Games</h3>
-            <p id="robloxLogContent" data-expanded="false" 
-              data-preview-content="[01/14/2025] - Roleplay Update<br>- New vehicles in Westland RP.<br>[01/10/2025] - Bug Fix<br>- Resolved UI glitches in the menu."
-              data-full-content="[01/14/2025] - Roleplay Update<br>- New vehicles in Westland RP.<br>[01/10/2025] - Bug Fix<br>- Resolved UI glitches in the menu.<br>[12/20/2024] - Winter Event<br>- Added holiday-themed events.">
-              [01/14/2025] - Roleplay Update<br>- New vehicles in Westland RP.<br>[01/10/2025] - Bug Fix<br>- Resolved UI glitches in the menu.
-            </p>
-            <a href="javascript:void(0);" onclick="toggleLogDetails('robloxLogContent', 'robloxLogBtn')" id="robloxLogBtn" class="btn">Read More</a>
-          </div>
-       </div>
+        </div>
       </div>
     </section>
   </main>
 
-   <footer class="footer">
+  <footer class="footer">
     <div class="container">
       <p>&copy; 2025 MegaStudios Updates | All rights reserved.</p>
     </div>
